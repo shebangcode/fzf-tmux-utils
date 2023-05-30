@@ -20,4 +20,4 @@ Finally, run:
 
 ```cd ~/fzf-tmux-utils
 
-./install.sh``
+./install.sh```
