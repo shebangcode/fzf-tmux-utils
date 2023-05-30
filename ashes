@@ -1,0 +1,2 @@
+#!/bin/sh
+fd -E .git -E / | fzf-tmux -p --reverse --prompt="Ashes  " | xargs nvims
