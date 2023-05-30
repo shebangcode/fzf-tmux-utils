@@ -1,0 +1,21 @@
+#!/bin/bash
+items=("Tint" "Xp" "Cava" "Web Download")
+choice=$(printf "%s\n" "${items[@]}" | fzf-tmux -p --prompt="Programs  " --height=~50% --layout=reverse --border --exit-0)
+if [[ -z $choice ]]; then
+	echo "Nothing selected"
+	exit 1
+fi
+case $choice in
+	"Tint")
+		tint -n;;
+	"Xp")
+		xp;;
+	"Cava")
+		cava;;
+	"Web Download")
+		read -p "Insert link here  " dwlink
+		curl -fLO $dwlink;;
+	*)
+		echo "how";;
+esac
+

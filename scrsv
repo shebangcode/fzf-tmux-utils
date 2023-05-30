@@ -1,0 +1,14 @@
+#!/bin/bash
+items=("pipes" "cmatrix" "asciiquarium")
+choice=$(printf "%s\n" "${items[@]}" | fzf-tmux -p --prompt="󰹑 Screensavers  " --height=~50% --layout=reverse --border --exit-0)
+if [[ -z $choice ]]; then
+	echo "Nothing selected"
+	exit 1
+elif [[ $choice == "pipes" ]]; then
+	pipes
+elif [[ $choice == "cmatrix" ]]; then
+	cmatrix
+elif [[ $choice == "asciiquarium" ]]; then
+	asciiquarium
+fi
+

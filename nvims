@@ -1,0 +1,11 @@
+#!/bin/bash
+items=("Default" "NvChad" "AstroNvim" "DoughNvim")
+config=$(printf "%s\n" "${items[@]}" | fzf-tmux -p --prompt=" Neovim Config Switcher  " --height=~50% --layout=reverse --border --exit-0)
+if [[ -z $config ]]; then
+	echo "Nothing selected"
+	exit 1
+elif [[ $config == "Default" ]]; then
+	config=""
+fi
+NVIM_APPNAME=$config nvim $@
+
