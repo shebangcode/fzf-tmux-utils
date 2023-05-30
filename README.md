@@ -8,9 +8,11 @@ https://asciinema.org/a/588474
 To install these utilities, run:
 
 ```git clone https://github.com/shebangcode/fzf-tmux-utils ~```
+
 Or even:
 
 ```gh repo clone shebangcode/fzf-tmux-utils ~```
+
 Maybe also:
 
 ```git clone git@github.com:shebangcode/fzf-tmux-utils.git ~```
@@ -18,6 +20,4 @@ Maybe also:
 
 Finally, run:
 
-```cd ~/fzf-tmux-utils
-
-./install.sh```
+```cd ~/fzf-tmux-utils; ./install.sh```
