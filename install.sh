@@ -1,4 +1,4 @@
-sudo apt install tint nvim cava tmux cmatrix
+sudo apt install tint nvim cava tmux cmatrix fzf 
 
 sudo cp ~/fzf-tmux-utils/prgms /bin
 sudo cp ~/fzf-tmux-utils/ashes /bin
