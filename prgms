@@ -12,7 +12,7 @@ case $choice in
 		xp;;
 	"Cava")
 		cava;;
-	"Web Download")
+	"Web Download (via curl)")
 		read -p "Insert link here  " dwlink
 		curl -fLO $dwlink;;
 	*)
