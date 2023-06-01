@@ -1,5 +1,5 @@
 #!/bin/bash
-items=("Tint" "Xp" "Cava" "Web Download")
+items=("Tint" "Xp" "Cava" "Web Download (via curl)")
 choice=$(printf "%s\n" "${items[@]}" | fzf-tmux -p --prompt="Programs  " --height=~50% --layout=reverse --border --exit-0)
 if [[ -z $choice ]]; then
 	echo "Nothing selected"
