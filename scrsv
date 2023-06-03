@@ -5,7 +5,25 @@ if [[ -z $choice ]]; then
 	echo "Nothing selected"
 	exit 1
 elif [[ $choice == "pipes" ]]; then
-	pipes
+	pipes_options=("Normal" "Rounded" "Rainbow" "Rounded Rainbow")
+	pipes_choice=$(printf "%s\n" "${pipes_options[@]}" | fzf-tmux -p --prompt="Options  " --reverse --exit-0)
+	if [[ -z $pipes_choice ]]; then
+		echo "Nothing selected"
+		exit 1
+	fi
+	case pipes_choice in
+		"Normal")
+			pipes;;
+		"Rounded")
+			pipes -t 1;;
+		"Rainbow")
+			pipes | lolcat;;
+		"Rounded Rainbow")
+			pipes -t 1| lolcat;;
+		*)
+			echo "what"
+			exit 69;;
+	esac
 elif [[ $choice == "cmatrix" ]]; then
 	cmatrix
 elif [[ $choice == "asciiquarium" ]]; then
