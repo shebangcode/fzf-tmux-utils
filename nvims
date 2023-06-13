@@ -1,5 +1,5 @@
 #!/bin/bash
-items=("Default" "NvChad" "AstroNvim" "DoughNvim")
+items=("Default" "NvChad" "AstroNvim" "KickstartNvim" "DoughNvim")
 config=$(printf "%s\n" "${items[@]}" | fzf-tmux -p --prompt=" Neovim Config Switcher  " --height=~50% --layout=reverse --border --exit-0)
 if [[ -z $config ]]; then
 	echo "Nothing selected"
