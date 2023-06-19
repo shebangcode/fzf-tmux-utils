@@ -1,4 +1,5 @@
 sudo apt install tint neovim cava tmux cmatrix fzf lolcat
+cargo install xplr
 
 sudo cp ~/fzf-tmux-utils/prgms /bin
 sudo cp ~/fzf-tmux-utils/ashes /bin

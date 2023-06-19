@@ -12,6 +12,8 @@ case $choice in
 		xp;;
 	"Cava")
 		cava;;
+	"Xplr")
+		xplr;;
 	"Web Download (via curl)")
 		read -p "Insert link here  " dwlink
 		curl -fLO $dwlink;;
